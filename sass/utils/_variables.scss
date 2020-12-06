@@ -1,0 +1,16 @@
+$main-text: #757575;
+$accent-color: #2196f3;
+$title-color: #212121;
+$white: #ffffff;
+$hero-bg: #2f303a;
+$adress-color: rgba(255, 255, 255, 0.6);
+$bg-items: #f5f4fa;
+$social-item: #afb1b8;
+
+%flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+$font-main: Roboto, sans-serif;
+$font-logo: 'Raleway', sans-serif;

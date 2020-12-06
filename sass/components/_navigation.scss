@@ -1,0 +1,32 @@
+nav {
+  display: flex;
+  align-items: center;
+}
+.link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.02em;
+
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+.link-active {
+  @extend .link;
+  position: relative;
+
+  margin-right: 50px;
+  color: $accent-color;
+
+  &::after {
+    content: '';
+    border-bottom: solid 4px;
+    width: 100%;
+    border-radius: 2px;
+    color: $accent-color;
+    position: absolute;
+    left: 0;
+    bottom: -31px;
+  }
+}
