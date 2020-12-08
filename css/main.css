@@ -46,11 +46,6 @@ ul {
   margin: 0;
 }
 
-.logo, .logo-1,
-.logo-1 {
-  display: inline-block;
-}
-
 .checkbox,
 .visually-hidden {
   position: absolute !important;
@@ -196,6 +191,12 @@ footer .title-3 {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
 @media screen and (min-width: 768px) {
   nav {
     display: flex;
@@ -255,8 +256,10 @@ header .contacts-header_link {
   width: max-content;
 }
 
-.link:not(:last-child), .link-active:not(:last-child) {
-  margin-bottom: 40px;
+@media screen and (max-width: 767px) {
+  .link:not(:last-child), .link-active:not(:last-child) {
+    margin-bottom: 40px;
+  }
 }
 
 header .link, header .link-active {
@@ -268,7 +271,7 @@ header .link, header .link-active {
   .link, .link-active {
     display: inline-block;
     font-size: 14px;
-    margin-bottom: 0;
+    margin-bottom: 32px;
   }
   .link:not(:last-child), .link-active:not(:last-child) {
     margin-right: 50px;
@@ -294,8 +297,14 @@ header .link, header .link-active {
 
 @media screen and (min-width: 767px) {
   .link-active::after {
-    bottom: -31px;
+    bottom: -28px;
     display: inline-block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .link-active {
+    margin-bottom: 32px;
   }
 }
 
@@ -331,7 +340,6 @@ header .link, header .link-active {
   padding-bottom: 60px;
   background-color: #fff;
   width: 100%;
-  z-index: 10;
 }
 
 @media screen and (max-width: 767px) {
@@ -351,7 +359,6 @@ header .link, header .link-active {
 
 @media screen and (min-width: 768px) {
   .menu-container {
-    height: 60px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -384,6 +391,22 @@ header .link, header .link-active {
   .navigation-menu {
     text-align: start;
   }
+}
+
+.icon-cross {
+  fill: #212121;
+}
+
+.icon-cross:hover, .icon-cross:focus {
+  fill: #2196f3;
+}
+
+.icon-burger {
+  fill: #212121;
+}
+
+.icon-burger:hover, .icon-burger:focus {
+  fill: #2196f3;
 }
 
 .logo, .logo-1 {
@@ -692,6 +715,7 @@ footer .social-link {
 }
 
 .container {
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -754,13 +778,43 @@ footer .social-link {
   padding-right: 45px;
   margin-bottom: 60px;
   background-color: #2f303a;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mobile-1x.jpg);
 }
 
 @media screen and (min-width: 1200px) {
   .hero {
     padding-top: 200px;
     padding-bottom: 200px;
+  }
+}
+
+@media (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mobile-2x.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/tablet-1x.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/tablet-2x.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desktop-1x.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desktop-2x.jpg);
   }
 }
 
