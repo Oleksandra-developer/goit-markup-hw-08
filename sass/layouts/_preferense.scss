@@ -36,13 +36,13 @@
     background-image: url(../images/icons/astronaut.png);
   }
   @media screen and (min-width: 768px) {
-    flex-basis: calc(100% / 2 - 30px);
+    flex-basis: calc((100% - 2 * 30px) / 2);
     &:nth-child(even) {
       margin-left: 30px;
     }
   }
   @media screen and (min-width: 1200px) {
-    flex-basis: calc(100% / 4 - 30px);
+    flex-basis: calc((100% - 4 * 30px) / 4);
 
     &:not(:first-child) {
       margin-left: 30px;

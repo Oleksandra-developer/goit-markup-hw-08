@@ -1,8 +1,16 @@
-.contacts-1 {
-  display: flex;
+.contacts-header {
+  // display: flex;
   margin-left: auto;
-  align-items: flex-end;
+  align-items: center;
   margin-top: 0;
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+  }
 }
 
 .svg-contact {

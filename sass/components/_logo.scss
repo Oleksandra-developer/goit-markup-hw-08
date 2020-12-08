@@ -7,7 +7,11 @@
   color: $accent-color;
   text-align: center;
 
-  //  margin-right: 93px;
+  @media screen and (min-width: 1200px) {
+    header & {
+      margin-right: 93px;
+    }
+  }
 }
 .logo-1 {
   @extend .logo;

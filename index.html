@@ -15,30 +15,38 @@
 
 <body>
 
-    <!-- <header>
+     <header>
         <div class="container header">
             <nav>
                 <a href="./index.html" class="logo">Web<span class="logo-1">Studio</span></a>
-                <ul>
-                    <li class="link-active"><a href="link">Студия</a></li>
-                    <li class="link"><a href="./portfolio.html" class="nav-link">Портфолио</a></li>
-                    <li class="link"><a href="link" class="nav-link">Контакты</a></li>
-                </ul>
-            </nav>
-            <ul class="contacts-1">
-                <li class="link"><a href="mailto:info@devstudio.com" class="nav-link">
+                <button type="button" class="menu-button is-open" data-menu-button>
+                    <svg width="24" height="16" aria-label="Меню навигации">
+                        <use class="icon-cross" href="./images/icons/icons2.svg#cross-close"></use>
+                        <use class="icon-burger" href="./images/icons/icons2.svg#menu_burger"> </use>
+                    </svg>
+                </button>
+                <div class="menu-container is-open" data-menu>
+                    <ul class="navigation-menu">
+                        <li class="link-active"><a href="link">Студия</a></li>
+                        <li class="link"><a href="./portfolio.html" class="nav-link">Портфолио</a></li>
+                        <li class="link"><a href="link" class="nav-link">Контакты</a></li>
+                    </ul>                    
+                    <ul class="contacts-header">
+                        <li class="contacts-header_link"><a href="mailto:info@devstudio.com" class="nav-link">
                         <svg class="svg-contact" width="16px" height="12px">
                             <use href="./images/icons/symbol-defs.svg#envelope">
                             </use>
                         </svg>info@devstudio.com</a></li>
-                <li class="link"><a href="tel.:+380991111111" class="nav-link">
+                        <li class="contacts-header_link"><a href="tel.:+380991111111" class="nav-link">
                         <svg class="svg-contact" width="10px" height="16px">
                             <use href="./images/icons/symbol-defs.svg#smartphone">
                             </use>
                         </svg>+38 099 111 11 11</a></li>
-            </ul>
-        </div>
-    </header> -->
+                    </ul>
+                </div>
+                </nav>
+             </div>
+    </header> 
 
     <main>
        <section class="hero">
@@ -358,6 +366,7 @@
     </div>
     <script src="./js/modal.js">
     </script>
+    <script src="./js/menu.js"></script>
 </body>
 
 </html>
