@@ -424,7 +424,6 @@ footer .logo-1 {
   line-height: 1.143;
   letter-spacing: 0.02em;
   width: max-content;
-  display: inline-block;
 }
 
 .contacts-header_link:not(:last-child) {
@@ -438,6 +437,7 @@ header .contacts-header_link {
 
 @media screen and (min-width: 768px) {
   .contacts-header_link {
+    display: inline-block;
     font-size: 14px;
     margin: 0;
   }
