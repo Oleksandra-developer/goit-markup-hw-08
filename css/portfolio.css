@@ -328,8 +328,9 @@ header .link, header .link-active {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
+    padding-top: 0px;
     padding-bottom: 0;
   }
 }
@@ -349,6 +350,7 @@ header .link, header .link-active {
 
 @media screen and (min-width: 768px) {
   .navigation-menu {
+    padding-top: 32px;
     padding-bottom: 0;
   }
 }
@@ -406,14 +408,7 @@ footer .logo-1 {
 .contacts-header {
   margin-left: auto;
   margin-top: 0;
-}
-
-@media screen and (min-width: 768px) {
-  .contacts-header {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
+  text-align: start;
 }
 
 @media screen and (min-width: 1200px) {
@@ -429,6 +424,7 @@ footer .logo-1 {
   line-height: 1.143;
   letter-spacing: 0.02em;
   width: max-content;
+  display: inline-block;
 }
 
 .contacts-header_link:not(:last-child) {
