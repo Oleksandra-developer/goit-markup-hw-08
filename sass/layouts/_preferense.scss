@@ -49,9 +49,18 @@
     }
   }
 }
-@media screen and (min-width: 768px) {
-  .list-preferense {
-    display: flex;
-    flex-wrap: wrap;
+.list-preferense {
+  & .title-3 {
+    text-align: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    & {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    & .title-3 {
+      text-align: start;
+    }
   }
 }
