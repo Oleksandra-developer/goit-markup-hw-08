@@ -72,6 +72,10 @@
 .label-checkbox {
   display: block;
   margin-top: 20px;
+  font-size: 12px;
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
 }
 
 .icon-checkbox {

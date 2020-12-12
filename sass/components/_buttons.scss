@@ -10,7 +10,7 @@
   font-weight: 700;
   line-height: 1.87;
   letter-spacing: 0.06em;
-  padding: 10px 32px;
+  padding: 10px;
   margin-left: auto;
   margin-right: auto;
   height: 50px;
@@ -23,9 +23,8 @@
 
 .button-modal-submit {
   @extend .button;
-  @media screen and (min-width: 1200px) {
-    margin-top: 30px;
-  }
+  // @media screen and (min-width: 1200px) {
+  margin-top: 30px;
 }
 
 .button-send {

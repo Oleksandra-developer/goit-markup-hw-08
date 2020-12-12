@@ -139,7 +139,7 @@ footer .title-3 {
   font-weight: 700;
   line-height: 1.87;
   letter-spacing: 0.06em;
-  padding: 10px 32px;
+  padding: 10px;
   margin-left: auto;
   margin-right: auto;
   height: 50px;
@@ -150,10 +150,8 @@ footer .title-3 {
   display: block;
 }
 
-@media screen and (min-width: 1200px) {
-  .button-modal-submit {
-    margin-top: 30px;
-  }
+.button-modal-submit {
+  margin-top: 30px;
 }
 
 .button-send {
@@ -565,6 +563,13 @@ footer .field-modal {
 .label-checkbox {
   display: block;
   margin-top: 20px;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .label-checkbox {
+    font-size: 14px;
+  }
 }
 
 .icon-checkbox {
@@ -807,11 +812,16 @@ footer {
   margin: 0 auto;
   padding-top: 60px;
   padding-bottom: 60px;
-  text-align: center;
+}
+
+@media screen and (max-width: 1199px) {
+  footer {
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 1200px) {
-  footer .title-3 {
+  footer .title-3, footer .logo, footer .logo-1 {
     text-align: left;
   }
 }

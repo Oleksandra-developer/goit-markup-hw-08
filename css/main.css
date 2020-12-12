@@ -139,7 +139,7 @@ footer .title-3 {
   font-weight: 700;
   line-height: 1.87;
   letter-spacing: 0.06em;
-  padding: 10px 32px;
+  padding: 10px;
   margin-left: auto;
   margin-right: auto;
   height: 50px;
@@ -150,10 +150,8 @@ footer .title-3 {
   display: block;
 }
 
-@media screen and (min-width: 1200px) {
-  .button-modal-submit {
-    margin-top: 30px;
-  }
+.button-modal-submit {
+  margin-top: 30px;
 }
 
 .button-send {
@@ -509,8 +507,9 @@ header .contacts-header_link {
 }
 
 .modal {
-  height: 600px;
-  width: 450px;
+  position: relative;
+  height: 620px;
+  width: calc(100% - 30px);
   border-radius: 4px;
   background: #fff;
   padding: 40px;
@@ -519,13 +518,26 @@ header .contacts-header_link {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
+@media screen and (min-width: 480px) {
+  .modal {
+    height: 610px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .modal {
     position: absolute;
     top: 0px;
     left: 0px;
+    height: 630px;
     transform: translate(50%, 20%) scale(1);
     transition: transform 0.5s linear;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .modal {
+    max-width: 450px;
   }
 }
 
@@ -560,19 +572,12 @@ header .contacts-header_link {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 15px;
   position: absolute;
-  top: 100px;
-  right: 45px;
+  top: 8px;
+  right: 8px;
 }
 
 .close-button:hover, .close-button:focus {
   cursor: pointer;
-}
-
-@media screen and (min-width: 768px) {
-  .close-button {
-    top: 8px;
-    right: 8px;
-  }
 }
 
 .icon-close {
@@ -669,6 +674,13 @@ footer .field-modal {
 .label-checkbox {
   display: block;
   margin-top: 20px;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .label-checkbox {
+    font-size: 14px;
+  }
 }
 
 .icon-checkbox {
@@ -787,8 +799,6 @@ footer .social-link {
   background-size: cover;
   padding-top: 118px;
   padding-bottom: 118px;
-  padding-left: 45px;
-  padding-right: 45px;
   margin-bottom: 60px;
   background-color: #2f303a;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mobile-1x.jpg);
@@ -1076,6 +1086,7 @@ footer .social-link {
 .clients-list {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .client-button {
@@ -1085,7 +1096,7 @@ footer .social-link {
 
 @media screen and (max-width: 767px) {
   .client-button {
-    width: calc(100% / 2 - 30px);
+    width: calc((100% - 30px) / 2);
   }
   .client-button:nth-child(2n) {
     margin-left: 30px;
@@ -1094,7 +1105,7 @@ footer .social-link {
 
 @media screen and (min-width: 768px) {
   .client-button {
-    width: calc(100% / 3 - 30px);
+    width: calc((100% - 2 * 30px) / 3);
   }
   .client-button:not(:nth-child(3n + 1)) {
     margin-left: 30px;
@@ -1103,9 +1114,10 @@ footer .social-link {
 
 @media screen and (min-width: 1200px) {
   .client-button {
-    width: calc(100% / 6 - 30px);
+    width: calc((100% - 5 * 30px) / 6);
+    margin-bottom: 0;
   }
-  .client-button:not(:last-child) {
+  .client-button:not(:first-child) {
     margin-left: 30px;
   }
 }
@@ -1157,11 +1169,16 @@ footer {
   margin: 0 auto;
   padding-top: 60px;
   padding-bottom: 60px;
-  text-align: center;
+}
+
+@media screen and (max-width: 1199px) {
+  footer {
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 1200px) {
-  footer .title-3 {
+  footer .title-3, footer .logo, footer .logo-1 {
     text-align: left;
   }
 }
