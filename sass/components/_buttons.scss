@@ -23,8 +23,10 @@
 
 .button-modal-submit {
   @extend .button;
-  // @media screen and (min-width: 1200px) {
   margin-top: 30px;
+  @media screen and (max-width: 325px) {
+    margin-top: 0;
+  }
 }
 
 .button-send {
